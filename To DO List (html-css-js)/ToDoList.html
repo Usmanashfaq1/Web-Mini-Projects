@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TO Do List </title>
+
+<style>
+   
+    body {
+        background-color: rgb(215, 211, 202);
+    }
+    .card
+    {
+      
+        width: 1024px;
+        height: 1024px;
+        
+        background-color: white;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+    }
+
+    .title 
+    {
+        margin: 73px auto 0 auto; 
+        /* top right botton left */
+        
+        
+    }
+    .title h1
+    {
+        margin:0;
+        font-size: 90px;
+        font-family: 'inter';
+    }
+
+    .add-task
+    {
+        width: 831px;
+        height: 119px;
+        margin: 57px auto 0 auto; 
+        
+    }
+    .add-task .input-with-button input
+    {
+        width: 831px;
+        height: 119px;
+        margin: 0 2px 0 px;
+        border-radius: 10px;
+        border: 1px solid #ACADAE;
+        font-size: 36px;
+        
+        
+        
+
+    }
+  .task {
+    width: 831px;
+        height: 119px;
+        margin: 69px auto 0 auto; 
+        border-radius: 10px;
+        border: 1px solid #ACADAE;
+        font-size: 36px;
+        padding-left: 38px;
+        position: relative;
+  }
+
+  .task p{
+    font-size: 40px;
+   
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .add-button
+  {
+    width: 211px;
+    height: 76px;
+   border-radius: 10px;
+   border:#3976C6;
+    margin: 20px auto 0 auto; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    background-color: #3976C6;
+    color:white
+
+  }
+
+  .list
+  {
+    margin:0;
+    padding:0;
+  }
+
+ 
+
+  .delete-task 
+  {
+    position: absolute;
+      top: 0;
+      right: 0;
+    margin-top: 5px;
+    width: 15%;
+    height: 90%;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    
+    border-color: white;
+    border-radius: 10px;
+    font-size: 36px;
+    color:white;
+    background-color: #f26100;
+  }
+
+
+   
+
+
+</style>
+
+
+
+
+
+    </head>
+    <body>
+   <div class="card">
+    <div class="title">
+      <h1><b>My TO-Do List</b></h1>   
+    </div>
+
+    <button class="add-button">Add Task</button>
+
+    <div class="add-task">
+        <div class="input-with-button">
+          <input type="text" id="fname" name="fname" placeholder="Enter a task">
+          
+        </div>
+      </div>
+  
+
+      <div class="list">
+        
+      <div class="task">
+        <p></p>
+       
+          <button class="delete-task">Delete</button>
+       
+        
+    
+      </div>
+    </div>
+
+   </div>
+
+     
+
+
+
+<script>
+    const btn=document.querySelector(".add-button");
+    const card=document.querySelector(".card");
+    
+
+    //const task=document.querySelector(".task").children[0];
+   const list=document.querySelector(".list");
+   const elem=list.children[0];
+   elem.addEventListener("click", function() {
+  strikeThrough(elem.children[0]);
+});
+
+elem.children[1].addEventListener("click", function() {
+  deleteTask(elem);
+});
+   console.log(list.children[0]);
+    
+    
+
+
+    
+    btn.addEventListener("click",()=>
+{
+    const inputValue = document.getElementById('fname');
+    //alert(inputValue.value);
+ 
+    if(inputValue.value!=="")
+{
+ const listLength=list.childElementCount;
+ console.log(listLength);
+ const task=list.children[listLength-1].children[0];//getting to p!
+ console.log(task.innerText);
+ task.innerText=inputValue.value;
+ console.log(task.innerText);
+ 
+
+ //new child appending
+  const newchild=list.children[listLength-1].cloneNode(true);
+  console.log(newchild.children[0].innerText);
+  newchild.children[0].innerText=""; //emptying it
+  console.log(newchild.children[0].innerText);
+
+  //adding event listener 
+  newchild.addEventListener("click",function() {
+    strikeThrough(newchild.children[0])});
+
+    newchild.children[1].addEventListener("click", function() 
+    {
+      deleteTask(newchild)});
+      
+
+  list.appendChild(newchild);
+  increaseCard(card);
+  
+
+  //append child append at last of parent
+  
+
+    
+    // task.innerText=inputValue.value;
+    inputValue.value="";
+
+}
+else{
+   // alert("cant add empty!");
+}
+});
+
+
+function strikeThrough(elem)
+{
+  if(elem.innerText.trim() !== "")
+{
+  elem.style.textDecoration = "line-through";
+  elem.style.color = "gray";
+  
+}
+
+}
+
+function deleteTask(elem) // gonna pass task in it
+{
+  if(list.childElementCount>1)
+{
+  elem.remove(); 
+}
+}
+
+
+function increaseCard(card)
+{
+  console.log(list.childElementCount);
+  if(list.childElementCount>2)
+{
+  let height=window.getComputedStyle(card).height;
+  // console.log(height);
+  let numericHeight = parseFloat(height); // 200
+
+// Add 120
+numericHeight += 200;
+
+// Set new height
+card.style.height = `${numericHeight}px`;
+}
+  
+}
+
+
+//now i 
+    
+</script>
+
+
+    </body>
+</html>
