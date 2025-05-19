@@ -1,0 +1,110 @@
+
+/* 
+
+*
+{
+
+
+
+
+
+*/
+
+*
+{
+
+}
+
+
+p
+{
+
+}
+
+
+.yoo-hoo
+{
+
+}
+
+
+#UNIQUE-ID
+{
+
+}
+
+
+/* GROUP SELECTORS */
+ p,q,h1{
+
+ }
+
+
+ /* parent child */
+
+ div  p {
+
+ }
+
+ /* selects only childer */
+
+
+ div > p{
+
+ }
+
+ ul > li{
+
+ }
+
+ /* selects elements with specific attributes */
+
+ input[type="text"]
+ {
+
+ }
+
+
+ /* pseudo classess 
+ its target elemetns accoridng to unique statee and position */
+
+
+ a :hover{
+
+ }
+
+
+ /* pseudo elements */
+
+ p ::first-line
+ {
+    color: brown;
+ }
+
+
+
+ /* compound selectors
+
+ basically multiple conditons to select an element
+  */
+
+
+  /* descendant selectors  all descennadsts */
+
+  div p
+  {
+
+  }
+
+  /* adjancent sibling selector 
+  same parent 
+  only the immmidate selector
+   h2 + p
+   {
+} 
+  */
+
+  div{
+    opacity: 1;
+  }
+  

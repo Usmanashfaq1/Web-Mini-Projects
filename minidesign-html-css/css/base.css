@@ -1,0 +1,26 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+background-color: #232830;
+}
+
+
+ul {
+  list-style: none;   /* removes bullets */
+  padding: 0;         /* removes left indent */
+  margin: 0;          /* removes space around list */
+
+}
+
+a{
+    text-decoration: none;
+  color: inherit;
+}
+
+

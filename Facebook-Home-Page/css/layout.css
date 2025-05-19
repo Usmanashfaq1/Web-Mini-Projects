@@ -1,0 +1,109 @@
+
+.header
+{
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+   display: flex;
+   flex-flow: row wrap; 
+    
+ 
+   /* now main axis is x-axis  y-axis is cross */
+   justify-content: space-between;
+   align-items: center;
+   background-color: #FFFFFF;
+   padding: 14px 0;
+   height: 80px;
+
+}
+
+.search 
+{
+   border-radius: 50px;
+   border-style: none;
+   
+
+   
+   background-color: #F0F2F5;
+   font-size: 1rem;
+   padding: 10px 0;
+   margin-left: 5px;
+
+
+}
+
+.facebook-icon
+{
+
+  width: 50px;
+  
+  height: auto;
+  
+  
+}
+
+.nav ul
+{
+display: flex;
+gap: 14px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 1rem;
+}
+
+.left-group-header
+{
+   display: flex;
+   align-items: center;
+
+
+}
+
+
+.right-group-header
+{
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin-right: 20px;
+}
+
+
+.find-friend
+{
+   padding: 5px 10px;
+   border-radius: 20px;
+   border-style: none;
+   
+   
+}
+ .find-friend:hover {
+      background-color: #2980b9;
+      
+    }
+.menu,.messages,.notification
+{
+   border-radius: 100%;
+   border-style: none;
+   padding: 5px 5px ;
+   text-align: center;
+   
+}
+.profile-picture
+{
+   
+   width:30px;
+   height: 30px;
+   border-radius: 100%;
+   border-style: none;
+}
+.menu img ,.messages img,.notification img
+{
+width: 20px;
+height: auto;
+}
+
+.main
+{
+   margin-top: 80px;
+}

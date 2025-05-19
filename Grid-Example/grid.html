@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid + Flexbox Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #f4f4f4;
+      padding: 1rem;
+    }
+
+    main {
+      grid-area: main;
+      padding: 1rem;
+      background-color: #fff;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container
+    {
+        display: grid;
+        /* grid-template-columns: 50px 50px 50px; */
+        /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+        grid-template-columns: repeat(3,1fr);
+
+        grid-template-rows: repeat(2, 90px);
+        gap:5px;
+
+    }
+
+    .card {
+      display: flex;
+      gap: 1rem;
+      background-color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      align-items: center;
+      max-width: 500px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .info h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .info p {
+      color: #555;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>
+      <!-- Using Flexbox inside for layout -->
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Image" />
+        <div class="info">
+          <h2>Title</h2>
+          <p>This is a description of the card content.</p>
+        </div>
+      </div>
+
+      
+        <div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+</div>
+
+
+
+
+    </main>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

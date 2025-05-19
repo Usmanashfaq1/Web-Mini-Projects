@@ -1,0 +1,29 @@
+
+.footer
+{
+    grid-area: footer;
+    display: flex;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    color:white;
+   
+    /* row */
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+
+.footer-button
+{
+    background-color: #4699E0;
+    border-radius: 3px;
+    border-style: none;
+    color: white;
+    padding: 5px;
+}
+
+
+.footer-nav > ul{
+    display: flex;
+    justify-content: space-around;
+   gap: clamp(8px, 2vw, 24px);
+}

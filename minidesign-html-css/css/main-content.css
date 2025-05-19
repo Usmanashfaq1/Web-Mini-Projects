@@ -1,0 +1,105 @@
+
+.main
+{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-top: 6%;
+}
+
+.main-nav ul{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+   gap: clamp(8px, 2vw, 24px);
+   color: #909090;
+   font-style: italic;
+   font-size: 1.6rem;
+
+}
+
+.card-layout
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+
+
+}
+
+.card
+{
+     display: flex;
+  flex-direction: column;      /* Stack items vertically */
+  justify-content: center;     /* Center vertically */
+  align-items: center;         /* Center horizontally */
+  gap: 1rem;                   /* Space between items */
+  padding: 2rem;
+  height: 100%;
+  background-color: white;
+  border: 0 none ;
+  border-radius: 13px;
+
+
+    
+    
+
+}
+
+.card img{
+width: 70%;
+height: 40%;
+}
+
+.card .heading
+{
+
+}
+
+.card .text
+{
+
+}
+
+.card .date
+{
+    display: flex;
+    
+    gap:5px;
+    
+}
+
+.paggination >ul{
+
+     display: flex;
+    justify-content: space-around;
+    justify-items: center;
+   gap: clamp(8px, 2vw, 24px);
+   color: #909090;
+   font-style: italic;
+   font-size: 1.6rem;
+}
+
+
+
+.paggination .pag
+{
+color: #909090;
+text-decoration:none;
+}
+
+.paggination .pag:hover  
+/* if you give space its gonna go on its child so i removed space */
+{
+    color:#FF7575;
+  text-decoration:overline;
+  
+}
+
+
+
+
+

@@ -1,0 +1,9 @@
+.page-layout
+{
+    display: grid;
+    grid-template-areas: "header header " "main main"  "footer footer";
+
+ grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}

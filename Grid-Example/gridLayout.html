@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <style>
+            *{
+                box-sizing: border-box;
+                padding:0;
+                margin:0;
+
+            }
+            .page-layout
+            {
+                 display: grid;
+                 grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+                grid-template-columns:  150px repeat(2, minmax(100px, 1fr));
+                grid-template-rows: auto 1fr auto;
+                height: 100vh;
+                /* gap */
+               
+
+            }
+
+
+            .header{
+                grid-area: header;
+                text-align: center;
+                background-color: #c70808;
+                padding: 1rem;
+
+            }
+
+            .aside
+            {
+                grid-area: sidebar;
+                padding: 1rem;
+                background-color: #fbff01;
+            }
+
+            .main
+            {
+                grid-area: main;
+                padding: 1rem;
+                
+            }
+
+            .footer
+            {
+                grid-area: footer;
+                text-align: center; 
+                padding: 1rem;
+                background-color: #003df3;
+            }
+
+
+            /* writing media queries */
+
+            @media (max-width:500px)
+            {
+                .header{
+                    background-color :gold;
+                }
+            }
+
+
+            
+
+        </style>
+
+
+    </head>
+
+    <body>
+        <div class="page-layout">
+
+            <header class="header"> header</header>
+            <aside class="aside">side bar</aside>
+            <main class="main">
+              <h3>main</h3>
+                <div class="card">
+  <h4>card</h4>
+                </div>
+
+
+
+            </main>
+            <footer class="footer"> footer</footer>
+
+        </div>
+
+
+    </body>
+</html>
