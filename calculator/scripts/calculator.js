@@ -10,6 +10,19 @@ const display=document.getElementById("display");
  display.readOnly=true;
 
 
+ //dark mode
+
+
+ const toggle = document.getElementsByClassName("toggle-btn")[0];
+ const main=document.getElementsByClassName("main")[0];
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  main.classList.toggle("dark");
+
+});
+
+
 
 
 const number_buttons=document.getElementsByClassName("cal-btn-num");

@@ -6,9 +6,23 @@
     
 }
 
-body
+/* body
 {
     background-color: #f4f6fe;
+} */
+
+
+body {
+  --bg-color:  #f4f6fe;
+  
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
 }
 
 input{
