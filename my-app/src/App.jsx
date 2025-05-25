@@ -5,6 +5,8 @@ import './App.css'
 import Welcome from './components/Welcome';
 import Hello from './components/hello';
 import Fruit from './components/fruits';
+import StudentList from './components/StudentList';
+import Togggle from './components/RenderProp';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +26,20 @@ function App() {
     <Hello />
 
     <Fruit />
+    {/* here is student list */}
+    {/* its does not have any props (input) */}
+    <StudentList /> 
+    {/* render prop here */}
+    
+    <Togggle render={({ on, toggle }) => (
+  <div>
+    <p>The toggle is {on ? "ON" : "OFF"}</p>
+    <button onClick={toggle}>Toggle</button>
+  </div>
+)} />
+
+
+
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
