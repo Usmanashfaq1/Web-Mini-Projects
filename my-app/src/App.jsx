@@ -7,6 +7,8 @@ import Hello from './components/hello';
 import Fruit from './components/fruits';
 import StudentList from './components/StudentList';
 import Togggle from './components/RenderProp';
+import Foucs from './components/FoucsInput';
+import Watch from './components/StopWatch';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +39,11 @@ function App() {
     <button onClick={toggle}>Toggle</button>
   </div>
 )} />
+<Foucs />
+
+
+<Watch />
+
 
 
 
