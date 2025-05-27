@@ -9,7 +9,9 @@ import StudentList from './components/StudentList';
 import Togggle from './components/RenderProp';
 import Foucs from './components/FoucsInput';
 import Watch from './components/StopWatch';
-
+import Toolbar from './components/Button';
+import PropagationBox from './components/Propagation';
+import { ThemeProvider } from './components/ThemeContext';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -40,9 +42,21 @@ function App() {
   </div>
 )} />
 <Foucs />
-
-
+{/* here i am wrapping the watch inside the theme provider so its going to go deep inside
+the watch component and update button html element and change its style
+*/}
+<ThemeProvider > 
 <Watch />
+</ThemeProvider>
+
+
+<Toolbar onPlayMovie={()=>alert("movie playing")} onUploadImage={()=> alert(
+  "uploading image"
+)} />
+
+<br />
+<PropagationBox />
+
 
 
 
@@ -63,4 +77,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

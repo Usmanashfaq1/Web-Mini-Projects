@@ -1,5 +1,13 @@
+import { createContext,useContext } from "react";
+
+
+
+
+
+
 
 function Welcome({name,role}) {
+  
   return (
     <div>
       <h2>Welcome, {name}!</h2>

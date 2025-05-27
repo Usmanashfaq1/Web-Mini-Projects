@@ -3,10 +3,13 @@ import { useState } from "react";
 
 import { useRef } from "react";
 
+import { useTheme } from "./ThemeContext"; // basically a custom hook to use use context
+
 
 const Watch= ()=>
 {
-    const [time,setTime]=useState(0);
+    const {theme, setTheme}=useTheme(); // its returning an object
+    const [time,setTime]=useState(0); // // its returning an array
     const intervalRef = useRef(null);
 
     // things its do
@@ -36,7 +39,14 @@ const Watch= ()=>
     return (
         <div className="timer">
             <p className="time">{time.toPrecision(5)}</p>
-            <button onClick={onStart}>Start</button>
+          
+            <button 
+            style={{
+        backgroundColor: theme === 'light' ? '#fff' : '#333',
+        color: theme === 'light' ? '#000' : '#fff',
+      }}
+             onClick={onStart}>Start</button>
+             
              <button onClick={onStop}>Stop</button>
         </div>
 
