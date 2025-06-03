@@ -12,6 +12,7 @@ import Watch from './components/StopWatch';
 import Toolbar from './components/Button';
 import PropagationBox from './components/Propagation';
 import { ThemeProvider } from './components/ThemeContext';
+import PodcastCard from './components/PodcastCard';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -57,7 +58,13 @@ the watch component and update button html element and change its style
 <br />
 <PropagationBox />
 
+<h3 className="memo">use memo example....!</h3>
+{/* its a jsx element rendering h3 html tag! */}
 
+<PodcastCard title={"Russia and Ukraine hold brief talks despite heavy drone attacks"}
+ headline={"Moscow was expected to present its terms for a ceasefire"} length={"20min"}
+
+/>
 
 
 

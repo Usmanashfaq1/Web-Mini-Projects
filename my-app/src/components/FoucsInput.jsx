@@ -15,6 +15,7 @@ const Foucs = () =>
    {
     // now i can do anything with the dom elements
     inputRef.current.style.backgroundColor="red";
+    
    }
 
     return (
