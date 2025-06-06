@@ -1,28 +1,67 @@
 
-.habit
+.habit ol
 {
 display: flex;
-align-items: center;
+flex-direction: column;
+align-items: flex-start;
 gap:1rem;
 
+list-style: none;
+margin:0;
+padding-left:1rem;
+
 }
 
-.habit span
+.habit ol li
 {
+ display: grid;
+ grid-template-columns: 4rem 20rem 4rem;
+
+
+}
+
+.habit ol .tick
+{
+   display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;
      
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   background-color: #eee;
   border-radius: 8px;
-  
+  /* margin-right: 1rem; */
 }
 
-.habit p
+.habit ol .task-list
 {
   font-size: 1.5rem;
 }
 
-.habit span:hover{
+.habit ol .tick:hover
+{
     background-color: #56C376;
 }
 
+
+
+.delete-btn
+{
+   display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;
+  height: 30px;
+  width: 30px;
+    background-color: rgba(162, 224, 18, 0.815);
+    color:white;
+    padding: 1rem;
+    
+    
+
+}
+
+.delete-btn:hover
+{
+  background-color: #d14209;
+    transform:translateY(2px);
+}

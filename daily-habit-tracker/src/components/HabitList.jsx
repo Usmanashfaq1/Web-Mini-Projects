@@ -2,12 +2,12 @@ import Habit from './Habit';
 import './habit-list.css';
 
 
-const HabitList= ()=>
+const HabitList= ({habitlist,deleteTask})=>
 {
 
     return (
        <div className='habit-list'>
-        <Habit />
+        <Habit tasklist={habitlist}  deleteTask={deleteTask} />
        </div>
     );
 

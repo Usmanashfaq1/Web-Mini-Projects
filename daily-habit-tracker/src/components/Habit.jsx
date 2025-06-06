@@ -1,14 +1,35 @@
 import './habit.css';
 
-const Habit= ()=>
+const Habit= ({tasklist ,deleteTask})=>
 {
 
     return (
        <div className='habit'>
-        <span>
+       <ol>
+
+       
+        
+        {
+        tasklist.map((task,i)=>
+        (
+            
+            <li key={i}> 
+             <span className='tick'>
             ✔️
         </span>
-        <p>this is a habit</p>
+        <span className="task-list">{task}</span>
+
+        <button onClick={()=>deleteTask(i)} className='delete-btn'>
+            ❌
+        </button>
+
+            </li>
+        )
+    )
+
+}
+
+        </ol>
         
        </div>
     );

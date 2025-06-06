@@ -1,12 +1,30 @@
 import './add-habits.css';
-const AddHabit= ()=>
+import { useState } from 'react';
+const AddHabit= ({addTask})=>
 {
+    const [currentTask,setCurrentTask]=useState("");
+    // use state return an array
 
+
+   function handleInputChange(event)
+   {
+    
+     setCurrentTask(event.target.value);
+
+
+   }
 
     return (
         <div className="add-habits">
-            <input  placeholder='Add habits' size="30" required/>
-            <button>Add</button>
+            <input type="text" placeholder='Add habits' value={currentTask}  onChange={handleInputChange}  />
+            <button onClick={
+                ()=> {
+                    addTask(currentTask);
+                    setCurrentTask("");
+                }
+            
+
+            } >Add</button>
         </div>
     );
 }
