@@ -1,0 +1,12 @@
+
+.habit-tracker-card
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.271);
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.236);
+    
+}

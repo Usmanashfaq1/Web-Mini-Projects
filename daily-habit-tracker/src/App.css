@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  
+  /* text-align: center; */
+}
+
+.app-layout
+{
+  display: grid;
+
+  grid-template-areas:
+   "header" 
+   "main"
+   "footer";
+
+  grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  padding: 2rem;  
+  /* 16 +16 =32 px applied for all paddings */
+  height: 100vh;
+
+
+}
+
+
+
+
+
+
+

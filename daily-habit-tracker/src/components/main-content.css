@@ -1,0 +1,8 @@
+
+.main-content{
+    grid-area: main;
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+          /* centers vertically */
+    margin-top: 2%;
+}
