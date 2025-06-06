@@ -10,7 +10,7 @@ import { useState } from 'react';
 const HabitTracker= ()=>
 {
 
-    const [tasks,setTasks]=useState(["woww!","fssdfsf","sdfdsf"]);
+    const [tasks,setTasks]=useState([]);
     // the above thing is array destructing tasks is value at index 0 and function is 
     // at index 1 of the array return by use state method
     // use state returns an array not object
